@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="language.css">
+    <link rel="stylesheet" href="category.css">
+    <title>TV Show - Page</title>
+</head>
+
+<body>
+    <div>
+        <header class="nav_header">
+            <nav>
+              <ul class="nav_links">
+                <li> <a href="movie-ticket-booking.html">Home</a></li>
+                <div class="dropdown">
+                  <li class="dropdown"> <a href="#">Category</a></li>
+                  <div class="dropdown-content">
+                    <a href="Tvshow.html">TV Show</a>
+                    <a href="language.html">Movie</a>
+                  </div>
+                </div>
+                <li> <a href="genres.html" target="_self">Genres</a></li>
+                <li> <a href="language.html">Language</a></li>
+              </ul>
+            </nav>
+            <a href="payment.html"> <button class="button_sub">SUBSCRIBE</button></a>
+          </header>
+    </div>
+    <div>
+        <!-- MAIN (Center website) -->
+        <div class="main">
+
+            <h1 style="font-size: 50px; word-break: break-all;">AIR WALK</h1>
+            <hr>
+            <div id="myBtnContainer">
+                <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+                <button class="btn" onclick="filterSelection('action')"> season 1</button>
+                <button class="btn" onclick="filterSelection('thriller')"> season 2</button>
+           
+            </div>
+
+            <!-- Portfolio Gallery Grid -->
+            <div class="row">
+                <div class="column action">
+                    <div class="content">
+                        <a href="biggboos.html"><img src="../j-component/bigg boss postor.png" alt="biggboos" style="width:100%"></a>
+                    </div>
+                </div>
+                <div class="column action">
+                    <div class="content">
+                        <a href="biggboos.html"><img src="../j-component/bigg boss postor.png" alt="biggboos" style="width:100%"></a>
+                    </div>
+                </div>
+                <div class="column action">
+                    <div class="content">
+                        <a href="biggboos.html"><img src="../j-component/bigg boss postor.png" alt="biggboos" style="width:100%"></a>
+                        
+                    </div>
+                </div>
+
+                <div class="column thriller">
+                    <div class="content">
+                       <a href="biggboos.html"> <img src="../j-component/bigg boss 2 postor.png" alt="biggboos" style="width:100%"></a>
+
+                    </div>
+                </div>
+                <div class="column thriller">
+                    <div class="content">
+                        <a href="biggboos.html"><img src="../j-component/bigg boss 2 postor.png" alt="biggboos" style="width:100%"></a>
+                        
+                    </div>
+                </div>
+                <div class="column thriller">
+                    <div class="content">
+                        <a href="biggboos.html"><img src="../j-component/bigg boss 2 postor.png" alt="biggboos" style="width:100%"></a>
+                        
+                    </div>
+                </div>
+
+                </div>
+                <!-- END GRID -->
+            </div>
+
+            <!-- END MAIN -->
+        </div>
+        <footer class="foot">
+            <p>Copyright &copy; 2021 My Website</p>
+        </footer>
+    <tr>
+                <td>
+                    <table width="100%" style="border-spacing:0">
+                        <tr>
+                            <td style="background-color: rgb(152, 109, 192);padding: 15px;text-align: center;">
+                                <p style="font-size: 18px;color: #ffffff;margin-bottom: 13px;">Connect with us</p>
+                                <a href="#"><img src="white-facebook.png" width="30" title="Facebook"></a>
+                                <a href="#"><img src="white-twitter.png" width="30" title="Twitter"></a>
+                                <a href="#"><img src="white-youtube.png" width="30" title="Youtube"></a>
+                                <a href="#"><img src="white-linkedin.png" width="30" title="Linkedin"></a>
+                                <a href="#"><img src="white-instagram.png" width="30" title="Instagram"></a>
+                                
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+        <script>
+            filterSelection("all")
+            function filterSelection(c) {
+                var x, i;
+                x = document.getElementsByClassName("column");
+                if (c == "all") c = "";
+                for (i = 0; i < x.length; i++) {
+                    w3RemoveClass(x[i], "show");
+                    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+                }
+            }
+
+            function w3AddClass(element, name) {
+                var i, arr1, arr2;
+                arr1 = element.className.split(" ");
+                arr2 = name.split(" ");
+                for (i = 0; i < arr2.length; i++) {
+                    if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+                }
+            }
+
+            function w3RemoveClass(element, name) {
+                var i, arr1, arr2;
+                arr1 = element.className.split(" ");
+                arr2 = name.split(" ");
+                for (i = 0; i < arr2.length; i++) {
+                    while (arr1.indexOf(arr2[i]) > -1) {
+                        arr1.splice(arr1.indexOf(arr2[i]), 1);
+                    }
+                }
+                element.className = arr1.join(" ");
+            }
+
+
+            // Add active class to the current button (highlight it)
+            var btnContainer = document.getElementById("myBtnContainer");
+            var btns = btnContainer.getElementsByClassName("btn");
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].addEventListener("click", function () {
+                    var current = document.getElementsByClassName("active");
+                    current[0].className = current[0].className.replace(" active", "");
+                    this.className += " active";
+                });
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

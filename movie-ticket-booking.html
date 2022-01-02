@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>AIR - WALK</title>
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="category.css">
+
+
+
+</head>
+
+<body>
+  <div class="header">
+    <header>
+      <span class="logo"><img src="../j-component/logo/logo_transparent.png" alt="logo">
+
+        <span class="search" style="color: black;"><input type="text" placeholder=" Search"
+            style="width: 600px; font-size: larger; border-radius: 10px ;"></span>
+        <span> <a href="login.html"><img src="../j-component/images/login-profile-avator1.jpg" alt="my-account"
+              class="avatar"></span></span></a>
+    </header>
+  </div>
+  <div>
+    <header class="nav_header">
+      <nav>
+        <ul class="nav_links">
+          <li> <a href="movie-ticket-booking.html">Home</a></li>
+          <div class="dropdown">
+            <li class="dropdown"> <a href="#">Category</a></li>
+            <div class="dropdown-content"></div>
+              <a href="Tvshow.html">TV Show</a>
+              <a href="language.html">Movie</a>
+            </div>
+          </div>
+          <li> <a href="genres.html" target="_self">Genres</a></li>
+          <li> <a href="language.html">Language</a></li>
+        </ul>
+      </nav>
+      <a href="payment.html"> <button class="button_sub">SUBSCRIBE</button></a>
+    </header>
+  </div>
+  <div style="background-image: url(../j-component/slide_background.jpg);">
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="../j-component/master-poster.jpg" style="width:100%">
+        <div class="text">MASTER</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="../j-component/Conjuring-3-Banner.jpg" style="width:100%">
+        <div class="text">CONJURING</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="../j-component/nota-banner.jpg" style="width:100%">
+        <div class="text">NOTA</div>
+      </div>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+  <script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 2000);
+    }
+  </script>
+  <div>
+    <div style="padding-left: 15px; padding-top: 10px;">
+      <h1>Recommended</h1>
+    </div>
+
+    <div class="recommended">
+
+      <div class="container">
+        <a href="master-movie.html"><img src="../j-component/master-avator.jpg" alt="master" class="image"
+            style="max-height: 400px;"></a>
+        <div class="overlay">MASTER</div>
+
+        <a href="jaibhim - movie.html"><img src="jaibhim - poster2.jpg" alt="jaibhim" class="image"
+            style="max-height: 400px; margin-left: 110%;margin-top: -134%;"></a>
+        <div class="overlay" style="margin-left: 110%;">JAI BHIM</div>
+
+        <a href="Arjun-Reddy-movie.html"><img src="Arjun-Reddy-poster2.jpg" alt="arjun reddy" class="image"
+            style="max-height: 400px; margin-left: 220%;margin-top: -134%;"></a>
+        <div class="overlay" style="margin-left: 220%;">ARJUN REDDY</div>
+      </div>
+
+    </div>
+  </div>
+  <br> <br> <br>
+  <br> <br> <br>
+
+  <div class="ad-space">
+    <div><strong>
+        <h1>Ticket Booking Site</h1>
+      </strong></div>
+    <hr>
+    <ul>
+      <li><a href="https://in.bookmyshow.com/explore/movies" target="_blank"><b> Book My Show </b></a></li>
+      <li><a href="https://www.pvrcinemas.com/" target="_blank"><b> PVR Cinemas </b></a></li>
+    </ul>
+
+  </div>
+  <br> <br> <br>
+  <footer class="foot">
+    <p>Copyright &copy; 2021 My Website</p>
+  </footer>
+  <tr>
+    <td>
+      <table width="100%" style="border-spacing:0">
+        <tr>
+          <td style="background-color: rgb(152, 109, 192);padding: 15px;text-align: center;">
+            <p style="font-size: 18px;color: #ffffff;margin-bottom: 13px;">Connect with us</p>
+            <a href="#"><img src="white-facebook.png" width="30" title="Facebook"></a>
+            <a href="#"><img src="white-twitter.png" width="30" title="Twitter"></a>
+            <a href="#"><img src="white-youtube.png" width="30" title="Youtube"></a>
+            <a href="#"><img src="white-linkedin.png" width="30" title="Linkedin"></a>
+            <a href="#"><img src="white-instagram.png" width="30" title="Instagram"></a>
+
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+
+</body>
+
+</html>
